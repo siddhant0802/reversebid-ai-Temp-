@@ -1,8 +1,9 @@
 services:
   - type: web
-    name: reversehub-ai
+    name: reversebid-ai
     runtime: node
-    buildCommand: npm ci && npm run build
+    plan: free
+    buildCommand: npm install --include=dev && npm run build
     startCommand: npm start
     envVars:
       - key: HOST
